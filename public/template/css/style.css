@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+main {
+    flex: 1;
+}
+.background {
+    background: url('../assets/img/smp1.webp') repeat-y center center;
+    background-size: cover;
+    height: 50vh;
+    position: relative;
+    animation: move-vertical 40s infinite alternate ease-in-out;
+}
+@keyframes move-vertical {
+    0% {
+        background-position: center top;
+    }
+    100% {
+        background-position: center bottom;
+    }
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.5); /* Efek gelap */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.content-wrapper {
+    margin-top: -100px; /* Agar card naik ke atas */
+}
+
+.card-bordered {
+    background: rgba(255, 255, 255, 0.7); /* Transparansi putih */
+    border: none; /* Hilangkan border default */
+}
